@@ -1,0 +1,90 @@
+---
+---
+<header>
+  <div class="inner">
+    <a href="#top" class="wordmark">
+      HK Editing
+      <span class="dot" aria-hidden="true"></span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#voices">Voices</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: saturate(120%) blur(6px);
+    -webkit-backdrop-filter: saturate(120%) blur(6px);
+    background: rgba(247, 243, 238, 0.82);
+    border-bottom: 1px solid rgba(155, 163, 145, 0.4);
+  }
+
+  .inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .wordmark {
+    text-decoration: none;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    /* Shift dot down slightly to sit at baseline */
+    position: relative;
+    top: -2px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: var(--ink);
+  }
+
+  .nav-cta {
+    color: var(--ink) !important;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+</style>

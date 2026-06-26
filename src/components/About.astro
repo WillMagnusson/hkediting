@@ -1,0 +1,114 @@
+---
+---
+<section id="about">
+  <div class="grid">
+    <div class="photo-col" data-reveal>
+      <div class="photo-frame">
+        <span class="photo-label">headshot</span>
+        <span class="photo-inset" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="text-col" data-reveal style="transition-delay: 0.1s">
+      <p class="eyebrow">About</p>
+      <h2>The reader your book deserves before anyone else meets it</h2>
+      <p>
+        I'm Frida — an editor who has spent the better part of a decade in the quiet company of
+        other people's sentences. I came to this work the long way, through bookshops and slush
+        piles and far too many late nights with a red pencil, and I've never quite gotten over the
+        thrill of helping a story find its truest shape.
+      </p>
+      <p>
+        Every manuscript that lands on my desk gets the same thing: unhurried attention, an honest
+        ear, and a deep respect for the voice that's already there. I'm not here to make your book
+        sound like mine — I'm here to make it sound unmistakably, confidently like you.
+      </p>
+      <p class="signature">— Frida H.K.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(60px, 9vw, 110px) 32px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+
+  /* Photo */
+  .photo-frame {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border: 1px solid rgba(155, 163, 145, 0.5);
+    border-radius: 3px;
+    background:
+      repeating-linear-gradient(
+        135deg,
+        rgba(155, 163, 145, 0.1) 0 10px,
+        transparent 10px 20px
+      ),
+      #F2ECE3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .photo-label {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+  }
+
+  .photo-inset {
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(155, 163, 145, 0.35);
+    border-radius: 2px;
+    pointer-events: none;
+  }
+
+  /* Text */
+  .eyebrow {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 22px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(32px, 4.6vw, 48px);
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .signature {
+    margin-top: 32px;
+    margin-bottom: 0;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 26px;
+    color: var(--ink);
+  }
+</style>

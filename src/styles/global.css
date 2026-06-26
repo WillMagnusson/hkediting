@@ -1,0 +1,58 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(181, 147, 90, 0.25);
+}
+
+:root {
+  --accent:  #B5935A;
+  --sage:    #9BA391;
+  --ink:     #2C2A27;
+  --muted:   #6E675C;
+  --bg:      #F7F3EE;
+  --surface: #F1EBE1;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Source Serif 4', Georgia, serif;
+  --font-ui:      'Work Sans', system-ui, sans-serif;
+}
+
+/* Scroll-reveal base state */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+[data-reveal].visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect reduced motion — override everything */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

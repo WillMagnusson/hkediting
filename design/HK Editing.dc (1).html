@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Work+Sans:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:#F7F3EE}
+  ::selection{background:rgba(181,147,90,.25)}
+</style>
+</helmet>
+<div ref="{{ root }}" style="--accent:#B5935A; --sage:#9BA391; --ink:#2C2A27; --muted:#6E675C; --bg:#F7F3EE; position:relative; background:#F7F3EE; color:#2C2A27; font-family:'Source Serif 4',Georgia,serif; font-size:18px; line-height:1.7; overflow-x:hidden; min-height:100vh">
+
+  <div aria-hidden="true" style="position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.06; mix-blend-mode:multiply; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;)"></div>
+
+  <div style="position:relative; z-index:1">
+
+    <header style="position:sticky; top:0; z-index:20; backdrop-filter:saturate(120%) blur(6px); background:rgba(247,243,238,.82); border-bottom:1px solid rgba(155,163,145,.4)">
+      <div style="max-width:1120px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px">
+        <a href="#top" style="text-decoration:none; color:#2C2A27; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:26px; letter-spacing:.01em; display:flex; align-items:baseline; gap:9px">
+          <span>HK Editing</span>
+          <span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--accent)"></span>
+        </a>
+        <nav style="display:flex; align-items:center; gap:30px; flex-wrap:wrap; font-family:'Work Sans',sans-serif; font-size:12.5px; font-weight:500; letter-spacing:.13em; text-transform:uppercase">
+          <a href="#services" style="text-decoration:none; color:#6E675C">Services</a>
+          <a href="#about" style="text-decoration:none; color:#6E675C">About</a>
+          <a href="#voices" style="text-decoration:none; color:#6E675C">Voices</a>
+          <a href="#contact" style="text-decoration:none; color:#2C2A27; border-bottom:1px solid var(--accent); padding-bottom:2px">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="top" style="max-width:1120px; margin:0 auto; padding:clamp(80px,14vw,150px) 32px clamp(70px,11vw,120px); text-align:center">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .9s ease, transform .9s ease">
+        <p style="font-family:'Work Sans',sans-serif; font-size:12.5px; font-weight:600; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); margin-bottom:30px">Manuscript Editing &amp; Care</p>
+        <h1 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(48px,9vw,104px); line-height:1.02; letter-spacing:-.01em; margin-bottom:28px">HK&nbsp;Editing</h1>
+        <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(22px,3.4vw,32px); color:var(--muted); max-width:620px; margin:0 auto 42px; line-height:1.35">Thoughtful editing for writers who care about their words.</p>
+        <a href="#contact" style="display:inline-block; text-decoration:none; font-family:'Work Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#F7F3EE; background:var(--ink); padding:17px 38px; border-radius:2px; transition:background .25s ease, transform .25s ease" style-hover="background:var(--accent); transform:translateY(-2px)">Work With Me</a>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity 1s ease .15s, transform 1s ease .15s; margin-top:clamp(60px,9vw,96px); display:flex; align-items:center; justify-content:center; gap:18px; color:var(--sage)">
+        <span style="height:1px; width:64px; background:var(--sage)"></span>
+        <span style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--muted)">an independent editor</span>
+        <span style="height:1px; width:64px; background:var(--sage)"></span>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" style="max-width:1120px; margin:0 auto; padding:clamp(60px,9vw,100px) 32px">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .9s ease, transform .9s ease; text-align:center; margin-bottom:clamp(48px,7vw,72px)">
+        <p style="font-family:'Work Sans',sans-serif; font-size:12.5px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--accent); margin-bottom:18px">What I Offer</p>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(34px,5.5vw,54px); line-height:1.1">Three ways to shape a manuscript</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(24px,3vw,40px)">
+
+        <sc-for list="{{ services }}" as="svc" hint-placeholder-count="3">
+          <article data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .9s ease, transform .9s ease; background:rgba(255,255,255,.45); border:1px solid rgba(155,163,145,.45); border-radius:3px; padding:clamp(32px,3.5vw,44px) clamp(28px,3vw,38px); display:flex; flex-direction:column">
+            <div style="display:flex; align-items:center; gap:14px; margin-bottom:24px">
+              <span style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:30px; color:var(--accent); line-height:1">{{ svc.no }}</span>
+              <span style="flex:1; height:1px; background:rgba(155,163,145,.5)"></span>
+            </div>
+            <h3 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:28px; margin-bottom:6px">{{ svc.title }}</h3>
+            <p style="font-family:'Work Sans',sans-serif; font-size:11.5px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--sage); margin-bottom:20px">{{ svc.kicker }}</p>
+            <p style="color:var(--muted); font-size:17px; line-height:1.65">{{ svc.body }}</p>
+          </article>
+        </sc-for>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="max-width:1120px; margin:0 auto; padding:clamp(60px,9vw,110px) 32px">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(40px,6vw,80px); align-items:center">
+        <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .9s ease, transform .9s ease">
+          <div style="position:relative; aspect-ratio:4/5; border:1px solid rgba(155,163,145,.5); border-radius:3px; background:repeating-linear-gradient(135deg, rgba(155,163,145,.10) 0 10px, transparent 10px 20px), #F2ECE3; display:flex; align-items:center; justify-content:center">
+            <span style="font-family:'Work Sans',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--sage)">headshot</span>
+            <span style="position:absolute; inset:0; border:1px solid rgba(155,163,145,.35); margin:12px; border-radius:2px; pointer-events:none"></span>
+          </div>
+        </div>
+        <div data-reveal style="opacity:0; transform:translateY(20px); transition:opacity 1s ease .1s, transform 1s ease .1s">
+          <p style="font-family:'Work Sans',sans-serif; font-size:12.5px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--accent); margin-bottom:22px">About</p>
+          <h2 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(32px,4.6vw,48px); line-height:1.12; margin-bottom:28px">The reader your book deserves before anyone else meets it</h2>
+          <p style="color:var(--muted); margin-bottom:20px; font-size:18px">I'm Hannah — an editor who has spent the better part of a decade in the quiet company of other people's sentences. I came to this work the long way, through bookshops and slush piles and far too many late nights with a red pencil, and I've never quite gotten over the thrill of helping a story find its truest shape.</p>
+          <p style="color:var(--muted); font-size:18px">Every manuscript that lands on my desk gets the same thing: unhurried attention, an honest ear, and a deep respect for the voice that's already there. I'm not here to make your book sound like mine — I'm here to make it sound unmistakably, confidently like you.</p>
+          <div style="margin-top:32px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:26px; color:var(--ink)">— Hannah K.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="voices" style="position:relative; background:#F1EBE1; border-top:1px solid rgba(155,163,145,.4); border-bottom:1px solid rgba(155,163,145,.4)">
+      <div style="max-width:1000px; margin:0 auto; padding:clamp(70px,10vw,120px) 32px">
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .9s ease, transform .9s ease; text-align:center; margin-bottom:clamp(48px,7vw,72px)">
+          <p style="font-family:'Work Sans',sans-serif; font-size:12.5px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--accent)">In Their Words</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:clamp(56px,8vw,88px)">
+          <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="3">
+            <figure data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .9s ease, transform .9s ease; text-align:center; max-width:760px; margin:0 auto">
+              <div style="font-family:'Cormorant Garamond',serif; font-size:56px; line-height:0; color:var(--accent); margin-bottom:10px">&ldquo;</div>
+              <blockquote style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:clamp(24px,3.6vw,34px); line-height:1.34; color:var(--ink)">{{ q.text }}</blockquote>
+              <figcaption style="margin-top:26px; font-family:'Work Sans',sans-serif; font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)">{{ q.author }}<span style="color:var(--sage); font-weight:500"> · {{ q.work }}</span></figcaption>
+            </figure>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="max-width:840px; margin:0 auto; padding:clamp(70px,10vw,120px) 32px">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .9s ease, transform .9s ease; text-align:center; margin-bottom:clamp(40px,6vw,60px)">
+        <p style="font-family:'Work Sans',sans-serif; font-size:12.5px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--accent); margin-bottom:18px">Get In Touch</p>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:clamp(36px,6vw,58px); line-height:1.08; margin-bottom:18px">Let's talk about your manuscript</h2>
+        <p style="color:var(--muted); max-width:520px; margin:0 auto; font-size:18px">Tell me a little about your project and where it is in its life. I read every note myself and reply within a few days.</p>
+      </div>
+
+      <form ref="{{ form }}" onSubmit="{{ onSubmit }}" data-reveal style="opacity:0; transform:translateY(20px); transition:opacity .9s ease, transform .9s ease; display:flex; flex-direction:column; gap:22px">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px">
+          <label style="display:flex; flex-direction:column; gap:9px">
+            <span style="font-family:'Work Sans',sans-serif; font-size:11.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)">Name</span>
+            <input name="name" type="text" required="required" placeholder="Your name" style="font-family:'Source Serif 4',serif; font-size:17px; color:var(--ink); background:rgba(255,255,255,.6); border:1px solid rgba(155,163,145,.6); border-radius:2px; padding:14px 16px; outline:none" style-focus="border-color:var(--accent)">
+          </label>
+          <label style="display:flex; flex-direction:column; gap:9px">
+            <span style="font-family:'Work Sans',sans-serif; font-size:11.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)">Email</span>
+            <input name="email" type="email" required="required" placeholder="you@email.com" style="font-family:'Source Serif 4',serif; font-size:17px; color:var(--ink); background:rgba(255,255,255,.6); border:1px solid rgba(155,163,145,.6); border-radius:2px; padding:14px 16px; outline:none" style-focus="border-color:var(--accent)">
+          </label>
+        </div>
+        <label style="display:flex; flex-direction:column; gap:9px">
+          <span style="font-family:'Work Sans',sans-serif; font-size:11.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)">Project Type</span>
+          <select name="project" style="font-family:'Source Serif 4',serif; font-size:17px; color:var(--ink); background:rgba(255,255,255,.6); border:1px solid rgba(155,163,145,.6); border-radius:2px; padding:14px 16px; outline:none; appearance:none; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E675C' fill='none' stroke-width='1.5'/%3E%3C/svg%3E&quot;); background-repeat:no-repeat; background-position:right 16px center" style-focus="border-color:var(--accent)">
+            <option>Developmental editing</option>
+            <option>Copy editing</option>
+            <option>Proofreading</option>
+            <option>Not sure yet — let's discuss</option>
+          </select>
+        </label>
+        <label style="display:flex; flex-direction:column; gap:9px">
+          <span style="font-family:'Work Sans',sans-serif; font-size:11.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)">Your Message</span>
+          <textarea name="message" rows="5" required="required" placeholder="What are you working on? Genre, length, where it's at…" style="font-family:'Source Serif 4',serif; font-size:17px; color:var(--ink); background:rgba(255,255,255,.6); border:1px solid rgba(155,163,145,.6); border-radius:2px; padding:14px 16px; outline:none; resize:vertical; line-height:1.6" style-focus="border-color:var(--accent)"></textarea>
+        </label>
+        <button type="submit" style="align-self:flex-start; font-family:'Work Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#F7F3EE; background:var(--ink); border:none; padding:17px 40px; border-radius:2px; cursor:pointer; transition:background .25s ease, transform .25s ease" style-hover="background:var(--accent); transform:translateY(-2px)">Send Message</button>
+      </form>
+
+      <div ref="{{ thanks }}" style="display:none; text-align:center; padding:48px 24px; border:1px solid rgba(155,163,145,.5); border-radius:3px; background:rgba(255,255,255,.5)">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:48px; line-height:1; color:var(--accent); margin-bottom:16px">✦</div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:600; font-size:32px; margin-bottom:10px">Thank you — your note is on its way.</h3>
+        <p style="color:var(--muted); font-size:18px">I'll be in touch within a few days. In the meantime, keep writing.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="border-top:1px solid rgba(155,163,145,.4)">
+      <div style="max-width:1120px; margin:0 auto; padding:48px 32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px">
+        <div style="display:flex; align-items:baseline; gap:9px; font-family:'Cormorant Garamond',serif; font-weight:600; font-size:24px">
+          <span>HK Editing</span>
+          <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--accent)"></span>
+        </div>
+        <div style="font-family:'Work Sans',sans-serif; font-size:12.5px; letter-spacing:.04em; color:var(--muted)">© 2026 HK Editing · Crafted for writers who care</div>
+        <div style="display:flex; gap:24px; font-family:'Work Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:.12em; text-transform:uppercase">
+          <a href="#contact" style="text-decoration:none; color:var(--muted)">Email</a>
+          <a href="#contact" style="text-decoration:none; color:var(--muted)">Instagram</a>
+          <a href="#contact" style="text-decoration:none; color:var(--muted)">Goodreads</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:860},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#B5935A&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#B5935A&quot;,&quot;#9C5C4E&quot;,&quot;#6E7F5B&quot;,&quot;#7A6E8F&quot;]},&quot;paperTexture&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accentColor ?? "#B5935A";
+    return {
+      accent,
+      root: (el) => { this._root = el; if (el) this.applyTheme(el); },
+      form: (el) => { this._form = el; },
+      thanks: (el) => { this._thanks = el; },
+      onSubmit: (e) => {
+        e.preventDefault();
+        if (this._form && !this._form.reportValidity()) return;
+        if (this._form) this._form.style.display = "none";
+        if (this._thanks) this._thanks.style.display = "block";
+        if (this._thanks) this._thanks.scrollTop;
+      },
+      services: [
+        { no: "01", title: "Developmental Editing", kicker: "The big picture", body: "We step back and look at the whole — structure, pacing, character, the shape of the argument. This is the deep, generous read that helps a manuscript become the book it's reaching to be." },
+        { no: "02", title: "Copy Editing", kicker: "Line by line", body: "A close pass for clarity, consistency, and grace. I tune sentences, smooth transitions, and catch the small contradictions, always working with your voice rather than over it." },
+        { no: "03", title: "Proofreading", kicker: "The final polish", body: "The last careful look before your words meet the world: typos, punctuation, stray spaces, and formatting — so nothing distracts from the story you've worked so hard to tell." },
+      ],
+      quotes: [
+        { text: "Hannah saw the book I was trying to write long before I could. Her notes were kind, exacting, and exactly right — I trust her with anything now.", author: "Mara Ellison", work: "The Salt Houses" },
+        { text: "I've worked with editors who flatten you. Hannah does the opposite. She made my voice louder, not quieter, and the manuscript sharper on every page.", author: "Daniel Okafor", work: "A Quiet Inheritance" },
+        { text: "Careful, warm, and astonishingly thorough. I sent her a messy draft and got back a roadmap I'm still grateful for.", author: "Priya Raman", work: "Notes from the Allotment" },
+      ],
+    };
+  }
+  applyTheme(el) {
+    const accent = this.props.accentColor ?? "#B5935A";
+    el.style.setProperty("--accent", accent);
+    const tex = el.querySelector('[aria-hidden="true"]');
+    if (tex) tex.style.display = (this.props.paperTexture === false) ? "none" : "";
+    if (this.props.scrollReveal === false) {
+      el.querySelectorAll("[data-reveal]").forEach(n => { n.style.opacity = "1"; n.style.transform = "none"; });
+    }
+  }
+  componentDidUpdate() { if (this._root) this.applyTheme(this._root); }
+  reveal(n) { n.style.opacity = "1"; n.style.transform = "none"; }
+  componentDidMount() {
+    if (this._root) this.applyTheme(this._root);
+    const animate = this.props.scrollReveal !== false;
+    const targets = Array.from(this._root ? this._root.querySelectorAll("[data-reveal]") : []);
+    if (!animate) { targets.forEach(n => this.reveal(n)); return; }
+
+    // Reveal anything currently in (or above) the viewport.
+    const sweep = () => {
+      const h = window.innerHeight || document.documentElement.clientHeight;
+      for (let i = targets.length - 1; i >= 0; i--) {
+        const n = targets[i];
+        const r = n.getBoundingClientRect();
+        if (r.top < h * 0.92) { this.reveal(n); targets.splice(i, 1); }
+      }
+      if (!targets.length && this._onScroll) {
+        window.removeEventListener("scroll", this._onScroll, true);
+        window.removeEventListener("resize", this._onScroll);
+        this._onScroll = null;
+      }
+    };
+    this._onScroll = sweep;
+    window.addEventListener("scroll", sweep, true);
+    window.addEventListener("resize", sweep);
+    sweep();
+    // Run a couple more sweeps after layout/fonts settle.
+    this._t1 = setTimeout(sweep, 120);
+    this._t2 = setTimeout(sweep, 400);
+
+    // IntersectionObserver as the primary driver when it works.
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) { this.reveal(en.target); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.08, rootMargin: "0px 0px -6% 0px" });
+      targets.forEach(n => io.observe(n));
+      this._io = io;
+    }
+    // Safety net: never leave content hidden.
+    this._t3 = setTimeout(() => {
+      (this._root ? this._root.querySelectorAll("[data-reveal]") : []).forEach(n => this.reveal(n));
+    }, 2500);
+  }
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._onScroll) { window.removeEventListener("scroll", this._onScroll, true); window.removeEventListener("resize", this._onScroll); }
+    [this._t1, this._t2, this._t3].forEach(t => t && clearTimeout(t));
+  }
+}
+</script>
+</body>
+</html>

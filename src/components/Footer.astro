@@ -1,0 +1,82 @@
+---
+---
+<footer>
+  <div class="inner">
+    <div class="wordmark">
+      HK Editing
+      <span class="dot" aria-hidden="true"></span>
+    </div>
+
+    <p class="copy">&copy; 2026 HK Editing &middot; Crafted for writers who care</p>
+
+    <nav>
+      <a href="mailto:frida@hkediting.com">Email</a>
+      <a href="#contact">Instagram</a>
+      <a href="#contact">Goodreads</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid rgba(155, 163, 145, 0.4);
+  }
+
+  .inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .wordmark {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--ink);
+  }
+
+  .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    position: relative;
+    top: -2px;
+  }
+
+  .copy {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: var(--ink);
+  }
+</style>

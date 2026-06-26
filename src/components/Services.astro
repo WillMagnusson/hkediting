@@ -1,0 +1,135 @@
+---
+const services = [
+  {
+    no: "01",
+    title: "Developmental Editing",
+    kicker: "The big picture",
+    body: "We step back and look at the whole — structure, pacing, character, the shape of the argument. This is the deep, generous read that helps a manuscript become the book it's reaching to be.",
+  },
+  {
+    no: "02",
+    title: "Copy Editing",
+    kicker: "Line by line",
+    body: "A close pass for clarity, consistency, and grace. I tune sentences, smooth transitions, and catch the small contradictions, always working with your voice rather than over it.",
+  },
+  {
+    no: "03",
+    title: "Proofreading",
+    kicker: "The final polish",
+    body: "The last careful look before your words meet the world: typos, punctuation, stray spaces, and formatting — so nothing distracts from the story you've worked so hard to tell.",
+  },
+] as const;
+---
+
+<section id="services">
+  <div class="heading" data-reveal>
+    <p class="eyebrow">What I Offer</p>
+    <h2>Three ways to shape a manuscript</h2>
+  </div>
+
+  <div class="grid">
+    {services.map((svc, i) => (
+      <article class="card" data-reveal style={`transition-delay: ${i * 0.1}s`}>
+        <div class="card-top">
+          <span class="number">{svc.no}</span>
+          <span class="divider" aria-hidden="true"></span>
+        </div>
+        <h3>{svc.title}</h3>
+        <p class="kicker">{svc.kicker}</p>
+        <p class="body">{svc.body}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(60px, 9vw, 100px) 32px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: clamp(48px, 7vw, 72px);
+  }
+
+  .eyebrow {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(34px, 5.5vw, 54px);
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(24px, 3vw, 40px);
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(155, 163, 145, 0.45);
+    border-radius: 3px;
+    padding: clamp(32px, 3.5vw, 44px) clamp(28px, 3vw, 38px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .number {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 30px;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .divider {
+    flex: 1;
+    height: 1px;
+    background: rgba(155, 163, 145, 0.5);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .kicker {
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 20px;
+  }
+
+  .body {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+</style>
