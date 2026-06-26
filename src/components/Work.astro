@@ -1,0 +1,184 @@
+---
+const books = [
+  {
+    image: '/assets/gangland%202.jpg',
+    imgPos: 'center center',
+    tag: 'Kriminallitteratur',
+    title: 'Gangland Sweden, Del Två',
+    author: 'Amir Al Rubeji',
+    meta: 'Redaktör',
+  },
+  {
+    image: '/assets/connie%202.jpg',
+    imgPos: 'center center',
+    tag: 'Barnbok',
+    title: 'Så här leker Connie',
+    author: 'Christin Sparväng',
+    meta: 'Redaktör · Kikkuli Förlag · 2026',
+  },
+  {
+    image: '/assets/gruvfruns%202.webp',
+    imgPos: 'center center',
+    tag: 'Barnbok · Kommande',
+    title: 'Gruvfruns förbannelse',
+    author: 'Sara Källström',
+    meta: 'Redaktör · 2026',
+  },
+  {
+    image: '/assets/t%C3%A4vlings.jpg',
+    imgPos: 'center 25%',
+    tag: 'Skönlitteratur',
+    title: 'Tävlingsdjävulen',
+    author: 'Julia Jonsson',
+    meta: 'Redaktör',
+  },
+] as const;
+---
+
+<section id="work">
+  <div class="heading" data-reveal>
+    <p class="eyebrow">Mitt arbete</p>
+    <h2>Böcker jag har redigerat</h2>
+  </div>
+
+  <div class="grid">
+    {books.map((book, i) => (
+      <article class="card" data-reveal style={`transition-delay: ${i * 0.1}s`}>
+        <div class="img-wrap">
+          <img
+            src={book.image}
+            alt={`${book.title} av ${book.author}`}
+            style={`object-position: ${book.imgPos}`}
+          />
+        </div>
+        <div class="card-body">
+          <span class="tag">{book.tag}</span>
+          <h3>{book.title}</h3>
+          <p class="author">{book.author}</p>
+          <p class="meta">{book.meta}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(60px, 9vw, 100px) 32px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: clamp(48px, 7vw, 72px);
+  }
+
+  .eyebrow {
+    font-family: var(--font-ui);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(34px, 5.5vw, 54px);
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(16px, 2vw, 28px);
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 520px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(155, 163, 145, 0.45);
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-wrap {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: var(--surface);
+  }
+
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .card:hover .img-wrap img {
+    transform: scale(1.03);
+  }
+
+  .card-body {
+    padding: clamp(24px, 2.5vw, 32px) clamp(22px, 2vw, 28px);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .tag {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(22px, 2.4vw, 28px);
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .author {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 0;
+  }
+
+  .meta {
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(155, 163, 145, 0.3);
+  }
+</style>
