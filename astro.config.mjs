@@ -5,7 +5,6 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://willmagnusson.github.io/',
-  base: 'hkediting',
+  site: 'https://hkediting.se',
   integrations: [react()]
 });
