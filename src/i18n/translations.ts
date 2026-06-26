@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       services: 'Tjänster',
       about: 'Om mig',
+      work: 'Mitt arbete',
       voices: 'Röster',
       contact: 'Kontakt',
     },
@@ -98,6 +99,7 @@ export const translations = {
     nav: {
       services: 'Services',
       about: 'About',
+      work: 'My Work',
       voices: 'Voices',
       contact: 'Contact',
     },
