@@ -1,25 +1,31 @@
 ---
 import '../styles/global.css';
+import type { Lang } from '../i18n/translations';
 
 interface Props {
   title?: string;
   description?: string;
+  lang?: Lang;
 }
 
 const {
   title = 'HK Editing',
   description = 'Thoughtful editing for writers who care about their words.',
+  lang = 'sv',
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    <link rel="alternate" hreflang="sv" href="https://hkediting.se/" />
+    <link rel="alternate" hreflang="en" href="https://hkediting.se/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://hkediting.se/" />
     <!-- Fonts: Cormorant Garamond · Source Serif 4 · Work Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

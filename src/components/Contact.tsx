@@ -1,11 +1,10 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
+import type { Lang } from '../i18n/translations';
+import { translations } from '../i18n/translations';
 
 // Web3Forms — sign up at web3forms.com with your Gmail to get an access key.
 // Submissions land directly in your inbox, unlimited free tier.
 const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY';
-
-// Formspree alternative — uncomment and replace WEB3FORMS_KEY usage below:
-// const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 
 const CHEVRON = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E675C' fill='none' stroke-width='1.5'/%3E%3C/svg%3E")`;
 
@@ -18,21 +17,27 @@ type Fields = {
 
 type Errors = Partial<Fields>;
 
-function validate(fields: Fields): Errors {
-  const errs: Errors = {};
-  if (!fields.name.trim()) errs.name = 'Please enter your name.';
-  if (!fields.email.trim()) errs.email = 'Please enter your email.';
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email))
-    errs.email = 'Please enter a valid email address.';
-  if (!fields.message.trim()) errs.message = 'Please tell me a little about your project.';
-  return errs;
+interface Props {
+  lang: Lang;
 }
 
-export default function Contact() {
+export default function Contact({ lang }: Props) {
+  const t = translations[lang].contact.form;
+
+  function validate(fields: Fields): Errors {
+    const errs: Errors = {};
+    if (!fields.name.trim()) errs.name = t.errName;
+    if (!fields.email.trim()) errs.email = t.errEmail;
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email))
+      errs.email = t.errEmailInvalid;
+    if (!fields.message.trim()) errs.message = t.errMessage;
+    return errs;
+  }
+
   const [fields, setFields] = useState<Fields>({
     name: '',
     email: '',
-    project: 'Developmental editing',
+    project: t.projectOptions[0],
     message: '',
   });
   const [errors, setErrors] = useState<Errors>({});
@@ -72,7 +77,7 @@ export default function Contact() {
       if (!res.ok) throw new Error('Submission failed');
       setSubmitted(true);
     } catch {
-      setServerError('Something went wrong. Please try again or email directly.');
+      setServerError(t.errServer);
     } finally {
       setSubmitting(false);
     }
@@ -135,10 +140,10 @@ export default function Contact() {
           color: '#2C2A27',
           marginBottom: '10px',
         }}>
-          Thank you — your note is on its way.
+          {t.successTitle}
         </h3>
         <p style={{ color: '#6E675C', fontSize: '18px' }}>
-          I'll be in touch within a few days. In the meantime, keep writing.
+          {t.successBody}
         </p>
       </div>
     );
@@ -154,11 +159,11 @@ export default function Contact() {
       }}>
         <div>
           <label style={labelStyle}>
-            <span style={labelTextStyle}>Name</span>
+            <span style={labelTextStyle}>{t.nameLbl}</span>
             <input
               type="text"
               name="name"
-              placeholder="Your name"
+              placeholder={t.namePlaceholder}
               value={fields.name}
               onChange={(e) => update('name', e.target.value)}
               style={{
@@ -174,7 +179,7 @@ export default function Contact() {
 
         <div>
           <label style={labelStyle}>
-            <span style={labelTextStyle}>Email</span>
+            <span style={labelTextStyle}>{t.emailLbl}</span>
             <input
               type="email"
               name="email"
@@ -195,7 +200,7 @@ export default function Contact() {
 
       {/* Project type */}
       <label style={labelStyle}>
-        <span style={labelTextStyle}>Project Type</span>
+        <span style={labelTextStyle}>{t.projectLbl}</span>
         <select
           name="project"
           value={fields.project}
@@ -211,21 +216,20 @@ export default function Contact() {
           onFocus={(e) => (e.target.style.borderColor = '#B5935A')}
           onBlur={(e) => (e.target.style.borderColor = 'rgba(155,163,145,0.6)')}
         >
-          <option>Developmental editing</option>
-          <option>Copy editing</option>
-          <option>Proofreading</option>
-          <option>Not sure yet — let's discuss</option>
+          {t.projectOptions.map((opt) => (
+            <option key={opt}>{opt}</option>
+          ))}
         </select>
       </label>
 
       {/* Message */}
       <div>
         <label style={labelStyle}>
-          <span style={labelTextStyle}>Your Message</span>
+          <span style={labelTextStyle}>{t.messageLbl}</span>
           <textarea
             name="message"
             rows={5}
-            placeholder="What are you working on? Genre, length, where it's at…"
+            placeholder={t.messagePlaceholder}
             value={fields.message}
             onChange={(e) => update('message', e.target.value)}
             style={{
@@ -268,7 +272,7 @@ export default function Contact() {
         onMouseDown={(e) => { if (!submitting) e.currentTarget.style.transform = 'translateY(-2px)'; }}
         onMouseUp={(e) => { e.currentTarget.style.transform = 'none'; }}
       >
-        {submitting ? 'Sending…' : 'Send Message'}
+        {submitting ? t.submitting : t.submit}
       </button>
     </form>
   );
