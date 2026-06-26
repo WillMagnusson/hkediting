@@ -4,7 +4,7 @@ import { translations } from '../i18n/translations';
 
 // Web3Forms — sign up at web3forms.com with your Gmail to get an access key.
 // Submissions land directly in your inbox, unlimited free tier.
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY';
+const WEB3FORMS_KEY = '69fef35a-0a00-463d-bea7-f8866a739cd7';
 
 const CHEVRON = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E675C' fill='none' stroke-width='1.5'/%3E%3C/svg%3E")`;
 
